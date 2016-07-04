@@ -25,12 +25,16 @@
         <init-param>
             <!-- 指定SpringMVC配置文件 -->
             <param-name>contextConfigLocation</param-name>
-            <param-value>/WEB-INF/springmvc.xml</param-value>
+            <param-value>
+                classpath:applicationContext.xml,
+                <!--classpath:spring-quartz.xml-->
+                <!--classpath:applicationContext-activemq.xml-->
+            </param-value>
         </init-param>
     </servlet>
 
     <servlet-mapping>
-        <!-- 指定请求的后缀，可以随意写，这里用.html作为请求后缀 -->
+        <!-- 指定请求的后缀，可以随意写，请求后缀 -->
         <servlet-name>Dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
