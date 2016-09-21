@@ -67,24 +67,24 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-    <!--避免IE执行AJAX时，返回JSON出现下载文件 -->
-    <bean id="mappingJacksonHttpMessageConverter"
-          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-        <property name="supportedMediaTypes">
-            <list>
-                <value>application/json;charset=UTF-8</value>
-            </list>
-        </property>
-    </bean>
+    <!--&lt;!&ndash;避免IE执行AJAX时，返回JSON出现下载文件 &ndash;&gt;-->
+    <!--<bean id="mappingJacksonHttpMessageConverter"-->
+          <!--class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">-->
+        <!--<property name="supportedMediaTypes">-->
+            <!--<list>-->
+                <!--<value>application/json;charset=UTF-8</value>-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
-    <!-- 启动SpringMVC的注解功能，完成请求和注解POJO的映射 -->
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="mappingJacksonHttpMessageConverter"/>    <!-- JSON转换器 -->
-            </list>
-        </property>
-    </bean>
+    <!--&lt;!&ndash; 启动SpringMVC的注解功能，完成请求和注解POJO的映射 &ndash;&gt;-->
+    <!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">-->
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<ref bean="mappingJacksonHttpMessageConverter"/>    &lt;!&ndash; JSON转换器 &ndash;&gt;-->
+            <!--</list>-->
+        <!--</property>-->
+    <!--</bean>-->
 
     <!-- 上传文件 -->
     <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">-->
@@ -117,6 +117,11 @@
         <!--<property name="minIdle" value="${jdbc.minIdle}"></property>-->
         <!--&lt;!&ndash; 获取连接最大等待时间 &ndash;&gt;-->
         <!--<property name="maxWait" value="${jdbc.maxWait}"></property>-->
+        <!--<property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}"/>-->
+        <!--<property name="validationQuery" value="${jdbc.validationQuery}"/>-->
+        <!--<property name="testWhileIdle" value="${jdbc.testWhileIdle}"/>-->
+        <!--<property name="testOnBorrow" value="${jdbc.testOnBorrow}"/>-->
+        <!--<property name="testOnReturn" value="${jdbc.testOnReturn}"/>-->
     <!--</bean>-->
 
     <!--&lt;!&ndash; spring和MyBatis完美整合，不需要mybatis的配置映射文件 &ndash;&gt;-->

@@ -26,11 +26,12 @@
             <!-- 指定SpringMVC配置文件 -->
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                classpath:applicationContext.xml,
+                classpath:applicationContext.xml
                 <!--classpath:spring-quartz.xml-->
                 <!--classpath:applicationContext-activemq.xml-->
             </param-value>
         </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
 
     <servlet-mapping>
