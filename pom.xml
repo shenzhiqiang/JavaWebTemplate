@@ -82,6 +82,16 @@
   </build>
 
   <dependencies>
+
+    <!--<dependency>-->
+      <!--&lt;!&ndash;以下只在编译和测试时运行 &ndash;&gt;-->
+      <!--<groupId>javax.servlet</groupId>-->
+      <!--<artifactId>javax.servlet-api</artifactId>-->
+      <!--<version>3.1.0</version>-->
+      <!--&lt;!&ndash;只在编译和测试时运行 &ndash;&gt;-->
+      <!--<scope>provided</scope>-->
+    <!--</dependency>-->
+
     <!--springframework-->
     <dependency>
       <groupId>org.springframework</groupId>
