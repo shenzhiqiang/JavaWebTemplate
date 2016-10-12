@@ -1,13 +1,13 @@
 package com;
 
-import com.lanxi.PointsExchangeAccountCheck.dao.ChkBrchMapper;
-import com.lanxi.PointsExchangeAccountCheck.dao.ChkErrMapper;
-import com.lanxi.PointsExchangeAccountCheck.dao.ChkPltMapper;
-import com.lanxi.PointsExchangeAccountCheck.entity.db.AccountCheckCtrlBean;
-import com.lanxi.PointsExchangeAccountCheck.service.AccountCheckServiceImpl;
+import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.*;
+import org.mockito.MockitoAnnotations;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
