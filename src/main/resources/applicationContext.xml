@@ -29,7 +29,7 @@
     <bean id="paramConfigs" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="locations">
             <list>
-                <value>classpath:param.properties</value>
+                <value>classpath:properties/param.properties</value>
             </list>
         </property>
     </bean>

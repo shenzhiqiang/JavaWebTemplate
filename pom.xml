@@ -37,6 +37,14 @@
     <resources>
       <resource>
         <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>test/**</exclude>
+          <exclude>prod/**</exclude>
+          <exclude>dev/**</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>src/main/resources/${evn}</directory>
       </resource>
       <!--<resource>-->
         <!--<directory>src/main/java</directory>-->
@@ -80,6 +88,33 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <!-- 本地开发环境 -->
+      <id>dev</id>
+      <properties>
+        <evn>dev</evn>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <!-- 测试环境 -->
+      <id>test</id>
+      <properties>
+        <evn>test</evn>
+      </properties>
+    </profile>
+    <profile>
+      <!-- 生产环境 -->
+      <id>prod</id>
+      <properties>
+        <evn>prod</evn>
+      </properties>
+    </profile>
+  </profiles>
 
   <dependencies>
 
